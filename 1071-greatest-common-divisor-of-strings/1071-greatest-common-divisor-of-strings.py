@@ -5,20 +5,18 @@ class Solution(object):
         :type str2: str
         :rtype: str
         """
-        
        
             
         len1, len2 = len(str1), len(str2)
         
-        def valid(k):
-            if len1 % k or len2 % k: 
+        def valid(i):
+            if len1 % i or len2 % i: 
                 return False
-            n1, n2 = len1 // k, len2 // k
-            base = str1[:k]
-            return str1 == n1 * base and str2 == n2 * base 
+            return str1 == len1 // i * str1[:i] and str2 == len2 // i * str1[:i] 
         
         for i in range(min(len1, len2), 0, -1):
             if valid(i):
                 return str1[:i]
         return ""
-      
+        
+       
