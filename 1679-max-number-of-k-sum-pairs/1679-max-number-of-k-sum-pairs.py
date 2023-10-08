@@ -5,14 +5,14 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        pair = defaultdict(int) # integer 0 is the default value of all the keys
+        pair = defaultdict(int) 
         res = 0
         
         for n in nums:
-            if pair[n]: # if we encountered k - n already
+            if pair[n]: 
                 res += 1
                 pair[n] -= 1
-            else: # if we did'n find a pair yet
+            else: 
                 pair[k - n] += 1
                 
         return res
