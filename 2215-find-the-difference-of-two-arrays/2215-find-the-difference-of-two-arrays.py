@@ -12,12 +12,12 @@ class Solution(object):
         for i in range(len(nums1)):
             if nums1[i] not in nums2:
                 a.append(nums1[i])
-        c.append(set(a))
+       # c.append(set(a))
               
         for i in range(len(nums2)):
             if nums2[i] not in nums1:
                 b.append(nums2[i])
-        c.append(set(b))
-        return c
+        #c.append(set(b))
+        return [list(set(a)),list(set(b))]
        
         
