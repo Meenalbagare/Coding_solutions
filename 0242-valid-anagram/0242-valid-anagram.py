@@ -4,7 +4,9 @@ class Solution(object):
         :type s: str
         :type t: str
         :rtype: bool
+    
         """
+        return sorted(s)==sorted(t)
         if len(s)!=len(t):
             return False
         counter1,counter2={},{}
