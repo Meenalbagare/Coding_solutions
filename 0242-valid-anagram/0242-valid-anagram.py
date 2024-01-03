@@ -6,16 +6,13 @@ class Solution(object):
         :rtype: bool
     
         """
-        # return Counter(s)==Counter(t)
-        # return sorted(s)==sorted(t)
         if len(s)!=len(t):
             return False
-        counter1,counter2={},{}
+        countS,countT={},{}
         for i in range(len(s)):
-            counter1[s[i]]=1+counter1.get(s[i],0)
-            counter2[t[i]]=1+counter2.get(t[i],0)
-        for i in counter1:
-            if counter1[i]!=counter2.get(i,0):
+            countS[s[i]]=1+countS.get(s[i],0)
+            countT[t[i]]=1+countT.get(t[i],0)
+        for c in countS:
+            if countS[c]!=countT.get(c,0):
                 return False
         return True
-        
