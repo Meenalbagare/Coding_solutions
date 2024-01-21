@@ -1,0 +1,16 @@
+Problem statement
+Sort the given unsorted array 'arr' of size 'N' in non-decreasing order using the selection sort algorithm.
+
+
+
+ Note:
+Change in the input array/list itself. 
+
+
+Example:
+Input:
+N = 5
+arr = {8, 6, 2, 5, 1}
+
+Output:
+1 2 5 6 8 
