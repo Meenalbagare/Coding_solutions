@@ -1,0 +1,43 @@
+DESCRIPTION
+Problem Statement
+
+You are given an integer array, a[], of size n, and an integer k. You are asked to make every number of a[] the multiple of k by adding zero or some positive value to each number.
+
+What are the minimum numbers you require to make all the numbers of the array multiple of k?
+
+Input Format
+
+The first line of input will be n, the size of the array.
+Next, n lines will be the element of the array.
+The next line will be an integer k, to which every number should be multiple.
+Constraints
+
+(1 <= n <= 1e5)
+(1 <= a[i] , k <= 1e9)
+Output Format
+
+Output the minimum numbers you need to add to the array elements, such that every element is multiple of k.
+Evaluation Parameters
+
+Sample Input
+5
+14
+25
+4
+6
+18
+3
+Sample Output
+5
+Explanation
+In this example, every number should be multiple of 3:
+
+we have to add 1 number to 14 as 15 is divisible by 3.
+
+we have to add 2 numbers to 25 as 27 is divisible by 3.
+
+we have to add 2 numbers to 4 as 6 is divisible by 3.
+
+we have to add 0 number to 6 as 6 is divisible by 3.
+
+We have to add 0 to 18 as 18 is divisible by 3.
