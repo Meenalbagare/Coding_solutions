@@ -1,0 +1,52 @@
+Develop a simple music player system that allows users to input information about a song and play it. The system consists of two classes, Media and Player.
+
+Class Definitions:
+
+1) Media Class: Represents a media item (song).
+
+a) Private Fields:
+
+title (String): Title of the song.
+artist (String): Artist of the song.
+duration (int): Duration of the song in seconds.
+b) Constructor:
+
+public Media(String title, String artist, int duration): Initializes the Media object with the provided title, artist, and duration.
+c) Getter Methods:
+
+public String getTitle(): Returns the title of the song.
+public String getArtist(): Returns the artist of the song.
+public int getDuration(): Returns the duration of the song.
+2) Player Class: Manages a playlist of Media objects.
+
+a) Private Fields:
+
+playlist (Media[]): An array of Media objects representing the playlist.
+currentSongIndex (int): Index of the currently playing song in the playlist.
+b) Constructor:
+
+public Player(Media[] playlist): Initializes the Player object with the provided playlist and sets the currentSongIndex to 0.
+c) Methods:
+
+public void play(): Prints information about the currently playing song to the console.
+Input Format
+
+song_name, artist_name, duration
+
+Constraints
+
+NA
+
+Output Format
+
+Now playing: str(song_name) by str(artist_name) Lennon Duration: int(duration) seconds
+
+Sample Input 0
+
+Drivers license
+Olivia Rodrigo
+200
+Sample Output 0
+
+Now playing: Drivers license by Olivia Rodrigo
+Duration: 200 seconds
