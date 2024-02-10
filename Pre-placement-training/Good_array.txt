@@ -1,0 +1,40 @@
+Good Array
+subject Codingcasino 100 points
+DESCRIPTION
+Problem Statement
+
+An array a of n elements containing only unique values is considered good if exactly n-1 numbers are satisfying the below condition:
+
+For every number x in a, there should be a number y in a such that y is just greater than x and y % x = 0.
+Input Format
+
+The first line is an integer n.
+Next n lines of input will be the a[i] (0 <= i < n)
+Constraints
+
+(2 <= n <= 1e5)
+(1<= a[i] <= 1e9) and all values are unique.
+Output Format
+
+print "Yes" if the array is good; else, print "No".
+Evaluation Parameters
+
+Sample Input
+5
+3 
+12 
+120 
+24 
+1
+Sample Output
+Yes
+Explanation
+The n-1 numbers can be chosen as 1, 3, 12, 24
+
+the number just greater than 1 is 3, and 3 is divisible by 1.
+
+the number just greater than 3 is 3, and 12 is divisible by 3.
+
+the number just greater than 12 is 24, and 24 is divisible by 12.
+
+the number just greater than 24 is 120, and 120 is divisible by 24.

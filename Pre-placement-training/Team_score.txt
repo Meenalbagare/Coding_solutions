@@ -1,0 +1,43 @@
+Team Score
+subject Codingcasino 50 points
+DESCRIPTION
+Problem Statement
+
+There are a total of n teams participating in a total 2 events. The score of each team in event 1 is a[i](0<= i < n), and in event 2 is b[i](0 <= i < n). The winner of the tournament is the team that scores maximum after combining both rounds. if two or more teams have maximum scores, then the team that participated earlier, i.e., lower index, will win.
+
+
+
+Input Format
+
+The first line contains an integer n, denoting the total number of friends.
+The second line contains n integers a[i] (0 <= i < n), denoting the number of candies that ith friend wants to eat.
+The third line contains an integer n, denoting the total number of friends.
+The fourth line contains n integers b[i] (0 <= i < n), denoting the number of initial candies to ith friend.
+Constraints
+
+1 <= n <= 1e5)
+(0 <= a[i] <= 1e4) for (0 <= i < n)
+(0 <= b[i] <= 1e4) for (0 <= i < n)
+Output Format
+
+print the index of the winning team and its combined score in separate lines.
+Evaluation Parameters
+
+Sample Input
+5
+5
+4
+3
+2
+﻿9
+5
+3
+4
+8
+5
+2
+Sample Output
+2
+11
+Explanation
+Team2 and Team4 have the maximum score of 11, but Team2 is the winner as it participated before Team

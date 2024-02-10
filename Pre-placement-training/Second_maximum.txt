@@ -1,0 +1,36 @@
+Second Maximum
+subject Codingcasino 50 points
+DESCRIPTION
+Problem Statement
+
+You are given an integer array. Your task is to find the second largest element, in the array.
+
+You are not allowed to use STL functions and any type of sort algorithms.
+
+Also you have to solve the question in 1 pass of traversing the array.
+
+Expected Time Complexity : O(N)
+
+Input Format
+
+The first line is the size of the integer array. N
+The next N lines are the array elements.
+Constraints
+
+The size of the array. 1<=N<=105 .
+The array elements. 1<=a[i]<=105 .
+Output Format
+
+The output is an integer, the second largest element of the array.
+Evaluation Parameters
+
+Sample Input
+4
+6
+7
+3
+4
+Sample Output
+6
+Explanation
+﻿The sorted form of the array is [3,4,6,7], hence the second largest element is 6.

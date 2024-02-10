@@ -1,0 +1,49 @@
+profit or loss
+subject Codingcasino 100 points
+DESCRIPTION
+Problem Statement
+
+There is an unordinary market in which a total of n persons are investing a[i] (0<= i < n) amount of money by sitting in a line, and everyone will be in profit or neutral. The profit of the i'th person is calculated as the difference of minimum money to his left from maximum money to his right.
+
+Minimum money to his left = minimum of (a[0], a[1], a[2].... a[i]).
+
+Maximum money to his right = maximum of (a[i], a[i+1], a[i+1].... a[n-1]).
+
+Find the final money of each person.
+
+Input Format
+
+The first line is an integer n, the total number of persons in the market.
+The second line contains n space-separated integers a[i] (0<=i<n), the money each person has invested.
+Constraints
+
+(1 <= n <= 1e5)
+(1<= a[i] <= 1e9)
+Output Format
+
+Print n lines containing a single integer, the final money of each friend, starting from position 0 (zero).
+Evaluation Parameters
+
+Sample Input
+5
+10
+3
+8
+﻿24
+12
+Sample Output
+24
+24
+29
+45
+21
+Explanation
+The profit of first person is (24-10) = 14, so final amount = 10+14 = 24
+
+The profit of second person is (24-3) = 21, so final amount = 3+21 = 24
+
+The profit of first person is (24-3) = 21, so final amount = 8 +21 = 29
+
+The profit of first person is (24-3) = 21, so final amount = 24+21 = 45
+
+The profit of first person is (12-3) = 9, so final amount = 12+9 = 21

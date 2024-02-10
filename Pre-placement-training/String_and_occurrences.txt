@@ -1,0 +1,36 @@
+String and Occurrences
+subject Codingcasino 100 points
+DESCRIPTION
+Problem Statement
+
+You are given a string S and two characters, A and B. Return the length of the longest substring, which starts with character A and ends with character A and has character B in between them.
+
+If there is no substring possible, return -1.
+
+Input Format
+
+The first line will contain a String S.
+The next line will contain character A.
+The last line will contain character B.
+Constraints
+
+1 ≤ |S| ≤ 105
+|A|, |B| = 1
+Output Format
+
+Return a single integer denoting the answer.
+Evaluation Parameters
+
+Sample Input
+
+aasdfdsafsdasf
+d
+s
+Sample Output
+
+8
+Explanation
+
+Only one substring starts with d and ends with d with s in between them.
+
+dfdsafsd

@@ -1,0 +1,26 @@
+Difference
+subject Codingcasino 100 points
+DESCRIPTION
+Problem Statement
+
+Raju is playing with a string, S. He gets tired of playing and starts feeling hungry. His dad then presents him with another string, T, and asks him to calculate the total number of positions where both the strings differ in character.
+
+Help Raju to find the answer to this problem, as he will get his food only if this problem is solved.
+
+Input Format
+
+The input consists of two lines, containing strings S and T respectively.
+Constraints
+
+The length of the strings in the input will never exceed 104
+Length of string S = Length of string T
+Output Format
+
+Print a single integer, the number of positions where both the strings have different characters.
+Evaluation Parameters
+
+Sample Input
+doselect
+﻿doseeesd
+Sample Output
+3
