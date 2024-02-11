@@ -1,15 +1,9 @@
-class Solution {
-    public int heightChecker(int[] heights) {
-        int[] arr=heights.clone();
-        Arrays.sort(arr);
-        int count=0;
-        for(int  i=0;i<heights.length;i++){
-            if(heights[i]!=arr[i]){
-                count++;
-            }
-        }
-        return count;
-    }
-}
-    
-    
+class Solution:
+    def heightChecker(self, heights: List[int]) -> int:
+        arr=sorted(heights)
+        c=0
+        for i in range(len(heights)):
+            
+            if(heights[i]!=arr[i]):
+                c+=1;
+        return c
