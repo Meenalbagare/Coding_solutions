@@ -1,7 +1,13 @@
-class Solution:  
-    def firstPalindrome(self, words: List[str]) -> str:
-        for word in words:
-            if word==word[::-1]:
-                return word
-        return ""
-              
+class Solution {
+    public String firstPalindrome(String[] words) {
+        for(String word: words){
+            StringBuilder reverse=new StringBuilder(word).reverse();
+            if(word.equals(reverse.toString())){
+                return word;
+            }
+        }
+        return "";
+    }
+}
+
+ 
