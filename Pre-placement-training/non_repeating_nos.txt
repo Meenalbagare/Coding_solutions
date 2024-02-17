@@ -1,0 +1,17 @@
+Find non-repeating numbers
+subject Codingcasino
+DESCRIPTION
+Problem Statement
+Write a program, which will take comma-separated integers as input via console. The program is then required to find non-repeating numbers from the input and print them on the console, one output per line. The output should be in the sorted order (increasing order)
+
+Input Format
+A stream of integer, separated by commas.
+Output Format
+A sequence of numbers each on a new line, in sorted form, which are non-repeating.
+Constraints
+The array elements A : -109 <= A <= 109 .
+Sample Input
+ 10,11,5,11,10,8
+Sample Output
+ 5
+ 8

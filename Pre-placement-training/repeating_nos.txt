@@ -1,0 +1,17 @@
+Find Repeating Numbers
+subject Codingcasino
+DESCRIPTION
+Problem Statement
+Write a program, which will take comma-separated integers as input via console. The program is then required to find repeating numbers from the input and print them on the console, one output per line. The output should be in the sorted order (increasing order)
+
+Input Format
+A stream of integers, separated by commas.
+Output Format
+A sequence of integers each integer on a new line, which were repeating in the original form, in sorted form now.
+Constraints
+The array elements A : -109<=A<=109` ,
+Sample Input
+ 10,11,5,11,10,8
+Sample Output
+ 10
+ 11﻿

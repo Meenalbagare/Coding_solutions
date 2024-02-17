@@ -1,0 +1,20 @@
+Roman numeral
+subject Codingcasino
+DESCRIPTION
+Problem Statement
+Given a Roman numeral lying between 1 and 3999 (both included), the task is to find its corresponding decimal value.
+
+Input Format
+Each test case contains a string s denoting the roman no.
+Output Format
+For each test case in a new line print the integer representation of roman number s, a string.
+Constraints
+1<=roman number range<4000
+Sample Input 1
+ V
+Sample Output 1
+ 5
+Sample Input 2
+III
+Sample Output 2
+ 3
