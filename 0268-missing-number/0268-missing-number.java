@@ -1,16 +1,18 @@
-class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        v=[-1]*(len(nums)+1)
-        for i in nums:
-            v[i]=i
-        for j in range(len(v)):
-            if v[j]==-1:
-                return j
-        return 0
-#         n=len(nums)
-#         for i in range(n+1):
-#             if i not in nums:
-#                 return i
-            
-            
-            
+import java.util.List;
+class Solution {
+    public int missingNumber(int[] nums) {
+        int[] v=new int[(nums.length)+1];
+        Arrays.fill(v,-1);
+        for(int i=0;i<nums.length;i++){
+            v[nums[i]]=nums[i];
+        }
+        for(int j=0;j<v.length;j++){
+            if(v[j]==-1){
+                return j;
+            }
+        }
+        return 0;
+        
+    }
+}
+ 
