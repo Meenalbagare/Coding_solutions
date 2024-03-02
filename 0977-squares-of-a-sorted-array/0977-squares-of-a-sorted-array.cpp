@@ -1,9 +1,12 @@
 class Solution {
-    public int[] sortedSquares(int[] nums) {
-        for(int i=0;i<nums.length;i++){
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        for(int i=0;i<nums.size();i++){
             nums[i]=nums[i]*nums[i];
         }
-        Arrays.sort(nums);
+        sort(nums.begin(),nums.end());
         return nums;
-    }
-}
+    }  
+};
+
+
