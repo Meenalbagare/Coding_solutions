@@ -1,15 +1,18 @@
-class Solution:
-    def minimumLength(self, s: str) -> int:
-        l=0
-        r=len(s)-1
-        while(l<r and s[l]==s[r]):
-            char=s[l]
-            while(l<=r and char==s[l]):
-                l+=1
-            while(l<=r and char==s[r]):
-                r-=1
-        return r-l+1
-            
-            
-            
-            
+class Solution {
+    public int minimumLength(String s) {
+        int l=0;
+        int r=s.length()-1;
+        while(l<r && s.charAt(l)==s.charAt(r)){
+            char ch=s.charAt(l);
+            while(l<=r && ch==s.charAt(l)){
+                l++;
+            }
+            while(l<=r && ch==s.charAt(r)){
+                r--;
+            }
+        }
+        return r-l+1;
+        
+    }
+}
+
