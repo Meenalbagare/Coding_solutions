@@ -1,24 +1,9 @@
-class Solution {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        HashSet<Integer> x= new HashSet<>();
-        for(int i:nums1){
-            x.add(i);
-        }
-        
-        HashSet<Integer> y=new HashSet<>();
-        for(int j:nums2){
-            y.add(j);
-        }
-        x.retainAll(y);
-        int idx=0;
-        int[] res=new int[x.size()];
-        for(int i:x){
-            res[idx++]=i;
-        }
-        return res;
-    }
-}
-
-
-
-
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        x=list(set(nums1))
+        y=list(set(nums2))
+        res=[]
+        for i in range(len(nums1)):
+            if nums1[i] in nums2:
+                res.append(nums1[i])
+        return set(res)
