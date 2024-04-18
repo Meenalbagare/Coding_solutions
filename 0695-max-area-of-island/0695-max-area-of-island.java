@@ -1,18 +1,25 @@
-class Solution:
-    def dfs(self, grid: List[List[int]], i: int, j: int) -> int:
-        n, m = len(grid), len(grid[0])
-        if 0 <= i < n and 0 <= j < m and grid[i][j] == 1:
-            grid[i][j] = 0
-            return 1 + self.dfs(grid, i + 1, j) + self.dfs(grid, i - 1, j) + self.dfs(grid, i, j + 1) + self.dfs(grid, i, j - 1)
-        return 0
-
-    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-        n, m = len(grid), len(grid[0])
-        max_area = 0
-        for i in range(n):
-            for j in range(m):
-                if grid[i][j] == 1:
-                    max_area = max(max_area, self.dfs(grid, i, j))
-        return max_area
-   
-    
+class Solution {
+    public int dfs(int[][] grid,int i, int j, int t){
+        int n=grid.length;
+        int m=grid[0].length;
+        if (i>=0 && i<n && j>=0 && j<m && grid[i][j]==1){
+            grid[i][j]=0;
+            return (1+dfs(grid,i+1,j,t)+dfs(grid,i-1,j,t)+dfs(grid,i,j+1,t)+dfs(grid,i,j-1,t));
+        }
+        return 0;
+    }
+    public int maxAreaOfIsland(int[][] grid) {
+        int n=grid.length;
+        int m=grid[0].length;
+        int ans=0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(grid[i][j]==1){
+                    int t=0;
+                    ans=Math.max(ans,dfs(grid,i,j,t));
+                }
+            }
+        }
+        return ans;
+    }
+}
