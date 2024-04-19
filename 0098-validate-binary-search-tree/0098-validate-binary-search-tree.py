@@ -37,15 +37,12 @@ class Solution:
             if not node:
                 return True
             
-            # Check if the current node's value is within the valid range
+           
             if node.val <= min_val or node.val >= max_val:
                 return False
             
-            # Recursively validate the left and right subtrees
-            # For the left subtree, the maximum value should be the current node's value
-            # For the right subtree, the minimum value should be the current node's value
             return (validate(node.left, min_val, node.val) and
                     validate(node.right, node.val, max_val))
         
-        # Start validating the entire tree with initial range of negative/positive infinity
+       
         return validate(root, float('-inf'), float('inf'))
