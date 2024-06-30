@@ -1,43 +1,28 @@
 class Solution {
     public String removeDuplicateLetters(String s) {
-        int[] count = new int[26]; // Count of each character in the string
-        boolean[] visited = new boolean[26]; // Whether a character is in the result stack
-        char[] chars = s.toCharArray();
-        
-        // Count the frequency of each character
-        for (char c : chars) {
-            count[c - 'a']++;
+        int[] freq=new int[26];
+        boolean[] map=new boolean[26];
+        char[] chars=s.toCharArray();
+        for(char c:chars){
+            freq[c-'a']++;
         }
-        
-        Stack<Character> stack = new Stack<>();
-        
-        for (char c : chars) {
-            int index = c - 'a';
-            count[index]--;
-            
-            // If character is already in the stack, continue to the next character
-            if (visited[index]) {
+        Stack<Character> stack=new Stack<>();
+        for(char c:chars){
+            int index=c-'a';
+            freq[index]--;
+            if(map[index]==true){
                 continue;
             }
-            
-            // Ensure the characters in the stack are in increasing order
-            // If the current character is smaller than the last character in the stack
-            // and the last character appears later in the string, we can pop it
-            while (!stack.isEmpty() && c < stack.peek() && count[stack.peek() - 'a'] > 0) {
-                visited[stack.pop() - 'a'] = false;
+            while(!stack.isEmpty() && c<stack.peek() && freq[stack.peek()-'a']>0){
+                map[stack.pop()-'a']=false;
             }
-            
-            // Add current character to the stack and mark it as visited
+            map[index]=true;
             stack.push(c);
-            visited[index] = true;
         }
-        
-        // Build the result string from the stack
-        StringBuilder result = new StringBuilder();
-        for (char c : stack) {
-            result.append(c);
+        StringBuilder newstr=new StringBuilder("");
+        for(char c: stack){
+            newstr.append(c);
         }
-        
-        return result.toString();
+        return newstr.toString();
     }
 }
