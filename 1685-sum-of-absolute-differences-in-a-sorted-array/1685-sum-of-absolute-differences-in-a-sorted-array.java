@@ -1,14 +1,15 @@
 class Solution {
     public int[] getSumAbsoluteDifferences(int[] nums) {
         int[] result=new int[nums.length];
+        int n=nums.length;
         int totalS=0;
         for(int num:nums){
             totalS+=num;
         }
         int leftS=0;
-        for(int i=0;i<nums.length;i++){
+        for(int i=0;i<n;i++){
             int rightS=totalS-leftS-nums[i];
-            result[i]=nums[i]*i-leftS+rightS-nums[i]*(nums.length-i-1);
+            result[i]=nums[i]*i-leftS+rightS-nums[i]*(n-i-1);
             leftS+=nums[i];
         }
         
