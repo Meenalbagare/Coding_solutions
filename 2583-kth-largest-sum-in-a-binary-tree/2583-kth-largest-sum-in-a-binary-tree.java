@@ -14,8 +14,8 @@
  * }
  */
 class Solution {
-    long max=0;
-    long s=0;
+    // long max=0;
+    // long s=0;
     List<Long> levelS=new ArrayList<>();
     public void helper(TreeNode root,int level){
         if(root==null){
