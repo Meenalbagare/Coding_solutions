@@ -14,16 +14,20 @@
  * }
  */
 public class Solution {
-    public boolean isValidBST(TreeNode root) {
-        return validate(root,Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
-    }
-    private boolean validate(TreeNode root, double minval,double maxval){
-        if(root==null) {
+    public boolean helper(TreeNode root,TreeNode min,TreeNode max){
+        if(root==null){
             return true;
         }
-        if(root.val<=minval || root.val>=maxval){
+        if(min!=null && root.val<=min.val){
+            return false;
+        } else if(max!=null && root.val >=max.val){
             return false;
         }
-        return validate(root.left, minval, root.val) && validate(root.right, root.val, maxval);
+        return helper(root.left,min,root) && helper(root.right,root,max);
     }
-}
+    public boolean isValidBST(TreeNode root) {
+        TreeNode min=null;
+        TreeNode max=null;
+        return helper(root,min,max);
+    }
+}    
