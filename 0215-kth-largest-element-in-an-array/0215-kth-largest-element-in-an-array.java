@@ -91,7 +91,7 @@ public class Solution {
         int n = nums.length;
 
         // Build a max-heap from the entire array
-        for (int i = n / 2 - 1; i >= 0; i--) {
+        for (int i = n / 2 ; i >= 0; i--) {
             heapify(nums, n, i);
         }
 
