@@ -7,7 +7,7 @@ class Solution {
         int len=0;
         while(r<n){
             char c=s.charAt(r);
-            if(map.containsKey(c) && map.get(c)>=l){
+            if(map.containsKey(c) ){
                 if(map.get(c)>=l){
                     l=map.get(c)+1;
                 }
