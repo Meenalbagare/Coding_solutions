@@ -8,9 +8,9 @@ class Solution {
         while(r<n){
             char c=s.charAt(r);
             if(map.containsKey(c) && map.get(c)>=l){
-                
+                if(map.get(c)>=l){
                     l=map.get(c)+1;
-                
+                }
             } 
             map.put(c,r);
             len=r-l+1;
