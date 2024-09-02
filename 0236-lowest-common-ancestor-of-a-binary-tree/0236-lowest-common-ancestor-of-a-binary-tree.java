@@ -38,7 +38,7 @@ class Solution {
             }
             
         }
-        TreeNode lca=path1.get(i-1);
+        TreeNode lca=path2.get(i-1);
         return lca;
     }
 }
