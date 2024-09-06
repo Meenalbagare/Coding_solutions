@@ -1,22 +1,14 @@
-class Solution(object):
-    def gcdOfStrings(self, str1, str2):
-        """
-        :type str1: str
-        :type str2: str
-        :rtype: str
-        """
-       
-            
-        len1, len2 = len(str1), len(str2)
-        
-        def valid(i):
-            if len1 % i or len2 % i: 
+class Solution:
+    
+    def gcdOfStrings(self, str1: str, str2: str) -> str:
+        l1=len(str1)
+        l2=len(str2)
+        def isDivisor(l):
+            if l1%l or l2%l:
                 return False
-            return str1 == len1 // i * str1[:i] and str2 == len2 // i * str1[:i] 
-        
-        for i in range(min(len1, len2), 0, -1):
-            if valid(i):
-                return str1[:i]
+            f1,f2=l1//l,l2//l
+            return str1[:l]*f1==str1 and str1[:l]*f2==str2
+        for l in range(min(l1,l2),0,-1):
+            if isDivisor(l):
+                return str1[:l]
         return ""
-        
-       
