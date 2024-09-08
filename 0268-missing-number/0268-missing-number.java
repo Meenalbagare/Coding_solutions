@@ -1,18 +1,14 @@
 import java.util.List;
 class Solution {
     public int missingNumber(int[] nums) {
-        int[] v=new int[(nums.length)+1];
-        Arrays.fill(v,-1);
+        int xor1=0,xor2=0;
+        int n=nums.length;
         for(int i=0;i<nums.length;i++){
-            v[nums[i]]=nums[i];
+            xor2=xor2^nums[i];
+            xor1=xor1^(i);
         }
-        for(int j=0;j<v.length;j++){
-            if(v[j]==-1){
-                return j;
-            }
-        }
-        return 0;
-        
+        xor1=xor1^n;
+        return xor1^xor2;
     }
 }
  
