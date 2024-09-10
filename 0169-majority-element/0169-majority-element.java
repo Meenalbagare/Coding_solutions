@@ -1,35 +1,29 @@
 class Solution {
-    
-    public static int counting(int[] nums,int num,int s, int e) {
+    public int majorityElement(int[] nums) {
+
+        int n=nums.length;
         int c=0;
-        for (int i=s;i<=e;i++) {
-            if (nums[i] ==num){
+        int ele=0;
+        for(int i=0;i<n;i++){
+            if(c==0){
+                c++;
+                ele=nums[i];
+            } else if(ele!=nums[i]){
+                c--;
+            }
+            else{
                 c++;
             }
         }
-        return c;
-    }
-    
-    public static int majorityEleRec(int[] nums,int s,int e) {
-        if (s==e) {
-            return nums[s];
+        int c1=0;
+        for(int i=0;i<n;i++){
+            if(ele==nums[i]){
+                c1++;
+            }
         }
-        
-        int mid = s+ (e-s)/2;
-        int l = majorityEleRec(nums,s,mid);
-        int r = majorityEleRec(nums,mid+1,e);
-        
-        if (l==r) {
-            return l;
+        if(c1>n/2){
+            return ele;
         }
-        
-        int lcount = counting(nums,l,s,e);
-        int rcount = counting(nums,r,s,e);
-        
-        return lcount>rcount ? l : r;
-        
-    }
-    public int majorityElement(int[] nums) {
-        return majorityEleRec(nums,0,nums.length-1);
-    }
+        return -1;
+}
 }
