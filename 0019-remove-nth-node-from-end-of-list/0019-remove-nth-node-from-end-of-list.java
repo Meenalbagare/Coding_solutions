@@ -10,21 +10,20 @@
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        int linkedlen=length(head);
-        ListNode curr=head;
-        int end=linkedlen-n-1;
-        if( end==-1) return head.next;
-        int i=0;
-        while(i<end){
+        ListNode dummy=new ListNode(0);
+        dummy.next=head;
+        int length=length(head);
+        int removenode=length-n;
+        ListNode curr=dummy;
+        if(head==null || head.next==null) return null;
+        for(int i=0;i<removenode;i++){
             curr=curr.next;
-            i++;
         }
         curr.next=curr.next.next;
-        return head;
+        return dummy.next;
     }
     public int length(ListNode head){
         int c=0;
-        if(head==null) return c;
         ListNode curr=head;
         while(curr!=null){
             c+=1;
@@ -33,3 +32,14 @@ class Solution {
         return c;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
