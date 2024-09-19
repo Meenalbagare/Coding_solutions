@@ -11,8 +11,8 @@ class Solution {
            // }
         }
         int n=nums.length;
-        Set<Integer> keySet=map.keySet();
-        for(Integer key:keySet){
+        // Set<Integer> keySet=map.keySet();
+        for(Integer key:map.keySet()){
             if(map.get(key)>n/3){
                 res.add(key);
             }
